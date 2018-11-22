@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#home'
-
+  resources :categories
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

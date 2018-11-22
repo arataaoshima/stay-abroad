@@ -35,6 +35,10 @@
     <%= f.label :map %><br>
     <%= f.text_field :map %>
   </div>
+  <div class="field">
+    <%= f.label :categories %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :category_name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% breadcrumb :post %>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -29,7 +29,9 @@
   <strong>Map:</strong>
   <%= @post.map %>
 </p>
-
+<% @post.categories.each do |article_category| %>
+<p><%= @post.categories.first.category_name %></p>
+<% end %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 <iframe width="560" height="315" src="<%= @post.photo2 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
